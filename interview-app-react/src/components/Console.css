@@ -1,146 +1,139 @@
 .console {
   width: 100%;
   max-width: 800px;
-  background-color: #1e1e1e;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  font-family: 'Consolas', 'Monaco', monospace;
+  font-family: 'Arial', sans-serif;
 }
 
 .console-header {
-  padding: 10px;
-  background-color: #333;
+  padding: 20px;
+  background-color: #4a90e2;
   color: #fff;
   text-align: center;
-  border-bottom: 1px solid #555;
 }
 
 .console-header h1 {
-  font-size: 18px;
-  font-weight: normal;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
 }
 
 .console-content {
-  padding: 0;
-  position: relative;
+  padding: 20px;
 }
 
-.console-output {
-  padding: 15px;
-  min-height: 350px;
-  max-height: 350px;
-  overflow-y: auto;
-  color: #ddd;
-  background-color: #1e1e1e;
-}
-
-.console-welcome p {
-  margin: 5px 0;
-  color: #88c0d0;
-}
-
-.console-input-container {
+.search-container {
   display: flex;
-  padding: 10px 15px;
-  background-color: #252525;
-  border-top: 1px solid #444;
   align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
-.console-prompt {
-  color: #88c0d0;
-  margin-right: 10px;
+.search-container label {
   font-weight: bold;
+  min-width: 50px;
 }
 
-.console-input {
+.search-container input {
   flex: 1;
-  background-color: transparent;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: #fff;
   border: none;
-  color: #fff;
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 14px;
-  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 }
 
-.console-message {
-  margin-bottom: 10px;
-  line-height: 1.4;
+.search-container button:hover:not(:disabled) {
+  background-color: #3a80d2;
 }
 
-.console-command {
-  color: #d0d0d0;
+.search-container button:disabled {
+  background-color: #a0c1e7;
+  cursor: not-allowed;
 }
 
-.console-executed {
-  color: #8ece6a;
+.results-container {
+  margin-top: 20px;
 }
 
-.console-error {
-  color: #ff6b6b;
+.results-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
-.console-warning {
-  color: #f3a953;
-}
-
-.console-info {
-  color: #88c0d0;
-}
-
-.console-help, .console-about {
-  color: #a9d8ff;
-}
-
-.console-result {
-  color: #ddd;
-}
-
-.console-loading {
-  color: #f9da5a;
+.loading-indicator {
+  text-align: center;
+  margin: 20px 0;
   font-style: italic;
+  color: #666;
 }
 
-.help-content p, .about-content p {
-  margin: 5px 0;
+.results-list {
+  list-style: none;
+  padding: 0;
 }
 
-.help-content ul {
-  margin: 10px 0;
-  padding-left: 20px;
+.result-item {
+  display: flex;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: transform 0.2s;
 }
 
-.help-content li {
-  margin: 5px 0;
+.result-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.search-results p {
-  margin-bottom: 10px;
-  color: #88c0d0;
+.result-image {
+  margin-right: 15px;
 }
 
-.results-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 5px;
+.result-image img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
-.results-table th, .results-table td {
-  padding: 6px 10px;
-  text-align: left;
-  border: 1px solid #444;
+.result-info h3 {
+  margin-bottom: 5px;
+  color: #333;
 }
 
-.results-table th {
-  background-color: #333;
-  color: #fff;
+.result-info p {
+  color: #666;
+  margin-bottom: 3px;
 }
 
-.results-table tr:nth-child(even) {
-  background-color: #252525;
+.error {
+  color: #e74c3c;
+  padding: 10px;
+  background-color: #fadbd8;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
-.results-table tr:hover {
-  background-color: #303030;
+.no-results {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  color: #666;
 }

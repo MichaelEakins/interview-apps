@@ -3,22 +3,13 @@
 import React, { useState } from "react";
 import "./Console.css";
 
-interface SearchResult {
-  artistName?: string;
-  trackName?: string;
-  collectionName?: string;
-  artworkUrl100?: string;
-  kind?: string;
-  wrapperType?: string;
-}
+export default function Console() {
+  const [artistName, setArtistName] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-const Console: React.FC = () => {
-  const [artistName, setArtistName] = useState<string>("");
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e) => {
     setArtistName(e.target.value);
   };
 
@@ -38,17 +29,13 @@ const Console: React.FC = () => {
       const data = await response.json();
       setSearchResults(data.results);
     } catch (err) {
-      setError(
-        `Error searching for "${artistName}": ${
-          err instanceof Error ? err.message : "Unknown error"
-        }`
-      );
+      setError(`Error searching for "${artistName}": ${err.message}`);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     searchArtist();
   };
@@ -56,7 +43,7 @@ const Console: React.FC = () => {
   return (
     <div className="console">
       <div className="console-header">
-        <h1>Music Portfolio</h1>
+        <h1>Music Search</h1>
       </div>
       <div className="console-content">
         <form className="search-container" onSubmit={handleSubmit}>
@@ -87,8 +74,10 @@ const Console: React.FC = () => {
 
           <ul className="results-list">
             {searchResults.map((item, index) => {
-              const artwork =
-                item.artworkUrl100 || "https://via.placeholder.com/100";
+              // TODO: The album covers are not displaying properly.
+              // Fix this section to display the album artwork.
+              // Hint: Look at the API response for the image URL property.
+              const artwork = "https://via.placeholder.com/100";
               const type = item.kind || item.wrapperType || "Unknown";
               const name = item.artistName || item.trackName || "Unknown";
 
@@ -110,6 +99,4 @@ const Console: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Console;
+}

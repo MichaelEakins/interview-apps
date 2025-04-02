@@ -143,3 +143,12 @@
 .results-table tr:hover {
   background-color: #303030;
 }
+
+.artwork-cell {
+  text-align: center;
+}
+
+.artwork-cell img {
+  border-radius: 4px;
+  object-fit: cover;
+}
