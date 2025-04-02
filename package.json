@@ -1,0 +1,32 @@
+{
+  "name": "interview-apps",
+  "version": "1.0.0",
+  "description": "Interview template applications in JavaScript, React, and Next.js",
+  "main": "index.js",
+  "private": true,
+    "scripts": {
+      "javascript": "cd ./interview-app-javascript && npm install && npx http-server",
+      "react": "cd ./interview-app-react && npm install && npm start",
+      "next": "cd ./interview-app-nextjs && npm install && npm run dev",
+      "javascript:yarn": "cd ./interview-app-javascript && yarn install && npx http-server",
+      "react:yarn": "yarn --cwd ./interview-app-react install && yarn --cwd ./interview-app-react start",
+      "next:yarn": "yarn --cwd ./interview-app-nextjs install && yarn --cwd ./interview-app-nextjs dev",
+      "install:all": "npm run install:js && npm run install:react && npm run install:next",
+      "install:js": "cd ./interview-app-javascript && npm install",
+      "install:react": "cd ./interview-app-react && npm install",
+      "install:next": "cd ./interview-app-nextjs && npm install",
+      "install:all:yarn": "yarn install:js:yarn && yarn install:react:yarn && yarn install:next:yarn",
+      "install:js:yarn": "cd ./interview-app-javascript && yarn install",
+      "install:react:yarn": "yarn --cwd ./interview-app-react install",
+      "install:next:yarn": "yarn --cwd ./interview-app-nextjs install"
+    },
+    "keywords": [
+      "javascript",
+      "react",
+      "nextjs",
+      "interview"
+    ],
+  "author": "Michael Eakins",
+  "license": "ISC",
+  "homepage": "https://github.com/MichaelEakins/interview-apps/"
+}

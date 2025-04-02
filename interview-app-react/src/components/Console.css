@@ -1,0 +1,146 @@
+.console {
+  width: 100%;
+  max-width: 800px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: 'Consolas', 'Monaco', monospace;
+}
+
+.console-header {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #555;
+}
+
+.console-header h1 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.console-content {
+  padding: 0;
+  position: relative;
+}
+
+.console-output {
+  padding: 15px;
+  min-height: 350px;
+  max-height: 350px;
+  overflow-y: auto;
+  color: #ddd;
+  background-color: #1e1e1e;
+}
+
+.console-welcome p {
+  margin: 5px 0;
+  color: #88c0d0;
+}
+
+.console-input-container {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #252525;
+  border-top: 1px solid #444;
+  align-items: center;
+}
+
+.console-prompt {
+  color: #88c0d0;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.console-input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  outline: none;
+}
+
+.console-message {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.console-command {
+  color: #d0d0d0;
+}
+
+.console-executed {
+  color: #8ece6a;
+}
+
+.console-error {
+  color: #ff6b6b;
+}
+
+.console-warning {
+  color: #f3a953;
+}
+
+.console-info {
+  color: #88c0d0;
+}
+
+.console-help, .console-about {
+  color: #a9d8ff;
+}
+
+.console-result {
+  color: #ddd;
+}
+
+.console-loading {
+  color: #f9da5a;
+  font-style: italic;
+}
+
+.help-content p, .about-content p {
+  margin: 5px 0;
+}
+
+.help-content ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.help-content li {
+  margin: 5px 0;
+}
+
+.search-results p {
+  margin-bottom: 10px;
+  color: #88c0d0;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+.results-table th, .results-table td {
+  padding: 6px 10px;
+  text-align: left;
+  border: 1px solid #444;
+}
+
+.results-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.results-table tr:nth-child(even) {
+  background-color: #252525;
+}
+
+.results-table tr:hover {
+  background-color: #303030;
+}

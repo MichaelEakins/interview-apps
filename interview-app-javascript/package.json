@@ -1,0 +1,19 @@
+{
+    "name": "interview-app-javascript",
+    "version": "1.0.0",
+    "description": "Vanilla JavaScript Interview Template App",
+    "main": "index.html",
+    "scripts": {
+      "start": "http-server"
+    },
+    "keywords": [
+      "javascript",
+      "vanilla",
+      "interview"
+    ],
+    "author": "Michael Eakins",
+    "license": "ISC",
+    "dependencies": {
+      "http-server": "^14.1.1"
+    }
+  }
