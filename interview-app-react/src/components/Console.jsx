@@ -1,11 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Console.css";
+
+/*
+ * iTunes Music Search Application
+ *
+ * This application allows users to search for music in the iTunes library.
+ *
+ * Known Issues:
+ * 1. Album artwork images are not displaying correctly
+ * 2. "No results" message appears before search is performed
+ * 3. Page continuously re-renders after performing a search
+ */
 
 function Console() {
   const [artistName, setArtistName] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [searchTrigger, setSearchTrigger] = useState(0);
+
+  // This effect causes continuous re-rendering after search
+  useEffect(() => {
+    if (searchResults.length > 0) {
+      setSearchTrigger((prev) => prev + 1);
+    }
+  }, [searchResults, searchTrigger]);
 
   const handleInputChange = (e) => {
     setArtistName(e.target.value);
@@ -65,19 +84,18 @@ function Console() {
 
           {error && <div className="error">{error}</div>}
 
-          {!isLoading &&
-            !error &&
-            searchResults.length === 0 &&
-            artistName.trim() !== "" && (
-              <div className="no-results">No results found</div>
-            )}
+          {/* This condition shows "No results" even before search is performed */}
+          {!isLoading && !error && artistName.trim() !== "" && (
+            <div className="no-results">No results found</div>
+          )}
 
           <ul className="results-list">
             {searchResults.map((item, index) => {
-              // TODO: The album covers are not displaying properly.
-              // Fix this section to display the album artwork.
-              // Hint: Look at the API response for the image URL property.
-              const artwork = "https://via.placeholder.com/100";
+              // Album artwork URL is incorrect - using a broken URL
+              const artwork =
+                item.kind === "song"
+                  ? "broken-url"
+                  : "https://via.placeholder.com/100";
               const type = item.kind || item.wrapperType || "Unknown";
               const name = item.artistName || item.trackName || "Unknown";
 
