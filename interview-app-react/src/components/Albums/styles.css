@@ -1,0 +1,33 @@
+/* src/components/Albums/styles.css */
+
+.albums-container {
+    margin-top: 20px;
+  }
+  
+  .albums-count {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .albums-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .albums-loading,
+  .albums-error,
+  .albums-empty {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+  }
+  
+  .albums-error {
+    color: #d9534f;
+    background-color: #f8d7da;
+  }

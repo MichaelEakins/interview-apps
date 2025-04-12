@@ -1,0 +1,54 @@
+/* src/components/Album/styles.css */
+
+.album {
+    display: flex;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .album:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .album-artwork {
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+  
+  .album-artwork img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .album-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  
+  .album-title {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .album-artist {
+    margin: 0 0 3px 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .album-release-date {
+    margin: 0;
+    font-size: 14px;
+    color: #888;
+  }
