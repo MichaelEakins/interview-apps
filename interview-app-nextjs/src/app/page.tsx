@@ -1,9 +1,9 @@
-import Console from "../components/Console";
+import Albums from "../components/Albums";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-8">
-      <Console />
+    <main className="flex min-h-screen flex-col items-center p-8">
+      <Albums />
     </main>
   );
 }

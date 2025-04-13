@@ -1,9 +1,16 @@
-export interface ShopItem {
-  id: string;
-  name: string;
-  price: number;
-  description: string;
-  imageUrl?: string;
+export interface AlbumType {
+  artistId?: number;
+  artistName?: string;
+  collectionId?: number;
+  collectionName?: string;
+  trackId?: number;
+  trackName?: string;
+  artworkUrl100?: string;
+  artworkUrl60?: string;
+  collectionPrice?: number;
+  trackPrice?: number;
+  releaseDate?: string;
+  primaryGenreName?: string;
+  kind?: string;
+  wrapperType?: string;
 }
-
-export type KioskState = 'welcome' | 'shop' | 'checkout' | 'confirmation';

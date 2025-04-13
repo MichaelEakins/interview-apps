@@ -4,23 +4,36 @@
   "description": "Interview template applications in JavaScript, React, and Next.js",
   "main": "index.tsx",
   "private": true,
-  "scripts": {
-    "javascript": "cd ./interview-app-javascript && npm install && npx http-server",
-    "react": "cd ./interview-app-react && npm install && npm start",
-    "next": "cd ./interview-app-nextjs && npm install && npm run dev",
-    "javascript:yarn": "cd ./interview-app-javascript && yarn install && npx http-server",
-    "react:yarn": "yarn --cwd ./interview-app-react install && yarn --cwd ./interview-app-react start",
-    "next:yarn": "yarn --cwd ./interview-app-nextjs install && yarn --cwd ./interview-app-nextjs dev",
-    "install:all": "npm run install:js && npm run install:react && npm run install:next",
-    "install:js": "cd ./interview-app-javascript && npm install",
-    "install:react": "cd ./interview-app-react && npm install",
-    "install:next": "cd ./interview-app-nextjs && npm install",
-    "install:all:yarn": "yarn install:js:yarn && yarn install:react:yarn && yarn install:next:yarn",
-    "install:js:yarn": "cd ./interview-app-javascript && yarn install",
-    "install:react:yarn": "yarn --cwd ./interview-app-react install",
-    "install:next:yarn": "yarn --cwd ./interview-app-nextjs install",
-    "test:react:yarn": "yarn --cwd ./interview-app-react test"
-  },
+    "scripts": {
+      "javascript": "cd ./interview-app-javascript && npm install && npx http-server",
+      "react": "cd ./interview-app-react && npm install && npm start",
+      "next": "cd ./interview-app-nextjs && npm install && npm run dev",
+      
+      "javascript:yarn": "yarn --cwd ./interview-app-javascript install && yarn --cwd ./interview-app-javascript http-server",
+      "react:yarn": "yarn --cwd ./interview-app-react install && yarn --cwd ./interview-app-react start",
+      "next:yarn": "yarn --cwd ./interview-app-nextjs install && yarn --cwd ./interview-app-nextjs dev",
+      
+      "install:all": "npm run install:js && npm run install:react && npm run install:next",
+      "install:js": "cd ./interview-app-javascript && npm install",
+      "install:react": "cd ./interview-app-react && npm install",
+      "install:next": "cd ./interview-app-nextjs && npm install",
+      
+      "install:all:yarn": "yarn install:js:yarn && yarn install:react:yarn && yarn install:next:yarn",
+      "install:js:yarn": "yarn --cwd ./interview-app-javascript install",
+      "install:react:yarn": "yarn --cwd ./interview-app-react install",
+      "install:next:yarn": "yarn --cwd ./interview-app-nextjs install",
+      
+      "test:react:yarn": "yarn --cwd ./interview-app-react test",
+      "test:next:yarn": "yarn --cwd ./interview-app-nextjs test",
+      "test:next:watch:yarn": "yarn --cwd ./interview-app-nextjs test:watch",
+      
+      "test:all:yarn": "yarn test:react:yarn && yarn test:next:yarn",
+      
+      "lint:next:yarn": "yarn --cwd ./interview-app-nextjs lint",
+      "build:next:yarn": "yarn --cwd ./interview-app-nextjs build",
+      
+      "dev:all:yarn": "concurrently \"yarn javascript:yarn\" \"yarn react:yarn\" \"yarn next:yarn\""
+    },
   "keywords": [
     "javascript",
     "react",

@@ -1,0 +1,52 @@
+.album {
+    display: flex;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .album:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .album-image {
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  
+  .album-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .album-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .album-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 4px 0;
+  }
+  
+  .album-artist {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 2px 0;
+  }
+  
+  .album-type {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+  }
